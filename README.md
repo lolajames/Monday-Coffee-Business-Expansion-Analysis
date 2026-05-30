@@ -79,8 +79,11 @@ The dataset consists of **4 relational tables** stored in a PostgreSQL database:
 
 **Entity Relationship:**
 ```
-city (1) ──< customers (M) ──< sales (M) >── products (1)
-```
+| Table | Foreign Key | References |
+|-------|------------|------------|
+| customers | city_id | city(city_id) |
+| sales | product_id | products(product_id) |
+| sales | customer_id | customers(customer_id) |```
 
 ---
 
