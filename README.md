@@ -578,3 +578,15 @@ ORDER BY avg_rating DESC;
 - **Add geospatial analysis** to identify optimal neighborhoods *within* recommended cities
 - **Forecast demand** using time-series modeling on the MoM growth data from Q9
 - **A/B test re-engagement campaigns** on churn-risk customers identified in My Q2 before committing to physical locations
+
+  ---
+
+## 👤 Author
+
+# Ololade Gbodogbe 
+
+## Data Analyst | SQL | Python | Power BI
+
+GitHub: https://github.com/lolajames
+
+LinkedIn: http://linkedin.com/in/ololade-gbodogbe-02319b1a5
