@@ -20,6 +20,7 @@
 
 - [Problem Statement](#problem-statement)
 - [Data Description](#data-description)
+- [Database Schema](#database-schema)
 - [Methodology](#methodology)
 - [SQL Concepts Used](#sql-concepts-used)
 - [Results & Outputs](#results--outputs)
@@ -78,7 +79,7 @@ The dataset consists of **4 relational tables** stored in a PostgreSQL database:
 | `rating` | SMALLINT | Customer satisfaction rating (1–5) |
 
 **Entity Relationship:**
-```
+
 | Table | Foreign Key | References |
 |-------|------------|------------|
 | customers | city_id | city(city_id) |
@@ -86,7 +87,41 @@ The dataset consists of **4 relational tables** stored in a PostgreSQL database:
 | sales | customer_id | customers(customer_id) |```
 
 ---
+## Database Schema
 
+```sql
+CREATE TABLE city (
+    city_id        INT PRIMARY KEY,
+    city_name      VARCHAR(100),
+    population     INT,
+    estimated_rent INT,
+    city_rank      INT
+);
+
+CREATE TABLE customers (
+    customer_id   INT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    city_id       INT REFERENCES city(city_id)
+);
+
+CREATE TABLE products (
+    product_id   INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price        INT
+);
+
+CREATE TABLE sales (
+    sale_id     INT PRIMARY KEY,
+    sale_date   DATE,
+    product_id  INT REFERENCES products(product_id),
+    customer_id INT REFERENCES customers(customer_id),
+    total       DECIMAL(10,2),
+    rating      SMALLINT
+);
+
+```
+
+---
 ## Methodology
 
 Each question below is paired with its SQL solution and business rationale.
