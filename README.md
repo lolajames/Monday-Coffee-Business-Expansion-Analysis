@@ -623,7 +623,7 @@ ORDER BY avg_rating DESC;
 
 # Ololade Gbodogbe 
 
-## Data Analyst | SQL | Python | Power BI
+## Data Analyst | SQL | Python | Power BI | EXCEL
 
 GitHub: https://github.com/lolajames
 
